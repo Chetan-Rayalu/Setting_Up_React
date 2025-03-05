@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 150px;
+}
+
+/* Normal state */
+.hover-glow {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Glow effect on hover for name */
+.name:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* Hide contact when hovering on name */
+.name:hover + .contact {
+  opacity: 0;
+}
+
+/* Glow effect on hover for contact */
+.contact:hover {
+  color: #ff6600;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 40px #ff6600;
+}
+
+/* Hide name when hovering on contact */
+.contact:hover + .name {
+  opacity: 0;
+}
+
+body {
+  background-color: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+}
